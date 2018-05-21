@@ -1,0 +1,24 @@
+[
+    {
+        "appId":1,
+        "name":"john",
+        "leaveType":"annual",
+        "leaveDays":5,
+        "status":"Approved"
+    },
+    {
+        "appId":2,
+        "name":"john",
+        "leaveType":"annual",
+        "leaveDays":10,
+        "status":"Declined"
+    },
+    {
+        "appId":3,
+        "name":"julie",
+        "leaveType":"sick",
+        "leaveDays":6,
+        "status":"Approved"
+    }
+
+]

@@ -1,0 +1,97 @@
+body{
+    height:auto;
+    background-color: #cccccc;
+}
+.clearfix {
+    clear:both;
+}
+.header {
+    /* background-image: url('/favicon.ico'); */
+    background-color: #666699;
+}
+.logo {
+    background: url('/favicon.ico') no-repeat;
+    margin:10px 0 10px 10px;
+    width:64px;
+    height:64px;
+    display:block;
+    float:left;
+}
+button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.main{
+    margin:20px 0 0 20px;
+    clear:left;
+    display:inline-block;
+    width:100%;
+}
+.appLink {
+    display:inline-block;
+    text-transform: uppercase;
+    width:60px;
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
+    margin:30px 40px 0 40px;
+    transition: .2s ease;
+}
+.appLink:hover {
+    color:#ccff66;
+}
+.footer {
+    position: absolute;
+    bottom: 20px;
+    width:100%;
+    text-align: center;
+    background: #666699;
+}
+
+@media (min-width:801px) {
+   
+
+
+   .navwide {
+       display: block;
+   }
+  
+   .navNarrow {
+       display: none;
+   }
+   .narrowLinks {
+       display: none;
+   }
+}
+@media (max-width:800px){
+    
+   .navWide {
+       display: none;
+   }
+   .navNarrow {
+       margin:40px 0 0 0;
+       float:right;
+       display: block;
+       height:32px;
+       padding-bottom:2px;
+       overflow: hidden;
+       -moz-transition: height .2s;
+       transition: height .2s;
+   }
+   .navBtn {
+       height:32px;
+       /* width:32px; */
+   }
+   .narrowLinks {
+       display: block;
+   }
+   .appLink {
+       float:left;
+       clear:left;
+       margin-left:10px;
+       margin-bottom:5px;
+       margin-top:5px;
+   }
+   
+}

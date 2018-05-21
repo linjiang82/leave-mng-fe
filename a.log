@@ -1,0 +1,100 @@
+2018-05-17T12:05:39.000000+00:00 app[api]: Build started by user linjiang82@gmail.com
+2018-05-17T12:06:02.000000+00:00 app[api]: Build started by user linjiang82@gmail.com
+2018-05-17T12:06:19.672031+00:00 heroku[web.1]: Restarting
+2018-05-17T12:06:19.672764+00:00 heroku[web.1]: State changed from up to starting
+2018-05-17T12:06:20.678311+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-05-17T12:06:20.806730+00:00 heroku[web.1]: Process exited with status 143
+2018-05-17T12:06:19.360015+00:00 app[api]: Deploy e50d93be by user linjiang82@gmail.com
+2018-05-17T12:06:19.360015+00:00 app[api]: Release v4 created by user linjiang82@gmail.com
+2018-05-17T12:05:39.000000+00:00 app[api]: Build succeeded
+2018-05-17T12:06:29.196230+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-05-17T12:06:32.479733+00:00 app[web.1]: 
+2018-05-17T12:06:32.479753+00:00 app[web.1]: > leave-mng@0.1.0 start /app
+2018-05-17T12:06:32.479755+00:00 app[web.1]: > node scripts/start.js
+2018-05-17T12:06:32.479756+00:00 app[web.1]: 
+2018-05-17T12:06:35.525568+00:00 app[web.1]: Could not find an open port at leave-mng.herokuapp.com.
+2018-05-17T12:06:35.525589+00:00 app[web.1]: Network error message: listen EADDRNOTAVAIL 52.70.218.113
+2018-05-17T12:06:35.525592+00:00 app[web.1]: 
+2018-05-17T12:06:35.555058+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2018-05-17T12:06:35.555569+00:00 app[web.1]: npm ERR! errno 1
+2018-05-17T12:06:35.557217+00:00 app[web.1]: npm ERR! leave-mng@0.1.0 start: `node scripts/start.js`
+2018-05-17T12:06:35.558007+00:00 app[web.1]: npm ERR! Failed at the leave-mng@0.1.0 start script.
+2018-05-17T12:06:35.557737+00:00 app[web.1]: npm ERR! 
+2018-05-17T12:06:35.557435+00:00 app[web.1]: npm ERR! Exit status 1
+2018-05-17T12:06:35.558273+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2018-05-17T12:06:35.570612+00:00 app[web.1]: 
+2018-05-17T12:06:35.572164+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2018-05-17T12:06:35.579066+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2018-05-17T12_06_35_560Z-debug.log
+2018-05-17T12:06:35.685179+00:00 heroku[web.1]: Process exited with status 1
+2018-05-17T12:06:35.733244+00:00 heroku[web.1]: State changed from starting to crashed
+2018-05-17T12:06:35.736630+00:00 heroku[web.1]: State changed from crashed to starting
+2018-05-17T12:06:38.607874+00:00 app[api]: Release v5 created by user linjiang82@gmail.com
+2018-05-17T12:06:38.607874+00:00 app[api]: Deploy e50d93be by user linjiang82@gmail.com
+2018-05-17T12:06:38.903046+00:00 heroku[web.1]: Restarting
+2018-05-17T12:06:02.000000+00:00 app[api]: Build succeeded
+2018-05-17T12:06:42.068741+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-05-17T12:06:43.982674+00:00 app[web.1]: 
+2018-05-17T12:06:43.982693+00:00 app[web.1]: > leave-mng@0.1.0 start /app
+2018-05-17T12:06:43.982694+00:00 app[web.1]: > node scripts/start.js
+2018-05-17T12:06:43.982695+00:00 app[web.1]: 
+2018-05-17T12:06:44.849938+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-05-17T12:06:45.651104+00:00 app[web.1]: Could not find an open port at leave-mng.herokuapp.com.
+2018-05-17T12:06:45.651141+00:00 app[web.1]: Network error message: listen EADDRNOTAVAIL 52.6.63.110
+2018-05-17T12:06:45.651143+00:00 app[web.1]: 
+2018-05-17T12:06:45.676820+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2018-05-17T12:06:45.677299+00:00 app[web.1]: npm ERR! errno 1
+2018-05-17T12:06:45.679067+00:00 app[web.1]: npm ERR! leave-mng@0.1.0 start: `node scripts/start.js`
+2018-05-17T12:06:45.679250+00:00 app[web.1]: npm ERR! Exit status 1
+2018-05-17T12:06:45.679535+00:00 app[web.1]: npm ERR! 
+2018-05-17T12:06:45.679740+00:00 app[web.1]: npm ERR! Failed at the leave-mng@0.1.0 start script.
+2018-05-17T12:06:45.679946+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2018-05-17T12:06:45.687078+00:00 app[web.1]: 
+2018-05-17T12:06:45.687300+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2018-05-17T12:06:45.687468+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2018-05-17T12_06_45_681Z-debug.log
+2018-05-17T12:06:45.739947+00:00 heroku[web.1]: Process exited with status 1
+2018-05-17T12:06:46.925505+00:00 app[web.1]: 
+2018-05-17T12:06:46.925521+00:00 app[web.1]: > leave-mng@0.1.0 start /app
+2018-05-17T12:06:46.925522+00:00 app[web.1]: > node scripts/start.js
+2018-05-17T12:06:46.925524+00:00 app[web.1]: 
+2018-05-17T12:06:48.403236+00:00 app[web.1]: Could not find an open port at leave-mng.herokuapp.com.
+2018-05-17T12:06:48.403267+00:00 app[web.1]: Network error message: listen EADDRNOTAVAIL 52.7.159.199
+2018-05-17T12:06:48.403269+00:00 app[web.1]: 
+2018-05-17T12:06:48.414748+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2018-05-17T12:06:48.415061+00:00 app[web.1]: npm ERR! errno 1
+2018-05-17T12:06:48.416205+00:00 app[web.1]: npm ERR! leave-mng@0.1.0 start: `node scripts/start.js`
+2018-05-17T12:06:48.416336+00:00 app[web.1]: npm ERR! Exit status 1
+2018-05-17T12:06:48.416504+00:00 app[web.1]: npm ERR! 
+2018-05-17T12:06:48.416632+00:00 app[web.1]: npm ERR! Failed at the leave-mng@0.1.0 start script.
+2018-05-17T12:06:48.416771+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2018-05-17T12:06:48.421201+00:00 app[web.1]: 
+2018-05-17T12:06:48.421352+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2018-05-17T12:06:48.421454+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2018-05-17T12_06_48_418Z-debug.log
+2018-05-17T12:06:48.529069+00:00 heroku[web.1]: Process exited with status 1
+2018-05-17T12:06:48.554248+00:00 heroku[web.1]: State changed from starting to crashed
+2018-05-17T12:06:49.381953+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=leave-mng.herokuapp.com request_id=2b8fdde8-7b17-415d-b590-845dc2974695 fwd="101.183.99.100" dyno= connect= service= status=503 bytes= protocol=https
+2018-05-17T12:06:50.160468+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=leave-mng.herokuapp.com request_id=9234424a-8551-4ec9-83b1-1c41a148aa43 fwd="101.183.99.100" dyno= connect= service= status=503 bytes= protocol=https
+2018-05-17T12:14:00.530671+00:00 app[api]: Release v6 created by user linjiang82@gmail.com
+2018-05-17T12:14:00.530671+00:00 app[api]: Attach MONGODB (@ref:mongolab-contoured-41384) by user linjiang82@gmail.com
+2018-05-17T12:14:01.034016+00:00 heroku[web.1]: State changed from crashed to starting
+2018-05-17T12:14:07.367918+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-05-17T12:14:09.523565+00:00 app[web.1]: 
+2018-05-17T12:14:09.523582+00:00 app[web.1]: > leave-mng@0.1.0 start /app
+2018-05-17T12:14:09.523583+00:00 app[web.1]: > node scripts/start.js
+2018-05-17T12:14:09.523584+00:00 app[web.1]: 
+2018-05-17T12:14:11.054587+00:00 app[web.1]: Could not find an open port at leave-mng.herokuapp.com.
+2018-05-17T12:14:11.054615+00:00 app[web.1]: Network error message: listen EADDRNOTAVAIL 54.152.42.186
+2018-05-17T12:14:11.054617+00:00 app[web.1]: 
+2018-05-17T12:14:11.070553+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2018-05-17T12:14:11.070940+00:00 app[web.1]: npm ERR! errno 1
+2018-05-17T12:14:11.072042+00:00 app[web.1]: npm ERR! leave-mng@0.1.0 start: `node scripts/start.js`
+2018-05-17T12:14:11.072203+00:00 app[web.1]: npm ERR! Exit status 1
+2018-05-17T12:14:11.072433+00:00 app[web.1]: npm ERR! 
+2018-05-17T12:14:11.072600+00:00 app[web.1]: npm ERR! Failed at the leave-mng@0.1.0 start script.
+2018-05-17T12:14:11.072769+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2018-05-17T12:14:11.077578+00:00 app[web.1]: 
+2018-05-17T12:14:11.077760+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2018-05-17T12:14:11.077863+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2018-05-17T12_14_11_074Z-debug.log
+2018-05-17T12:14:11.172801+00:00 heroku[web.1]: State changed from starting to crashed
+2018-05-17T12:14:11.144721+00:00 heroku[web.1]: Process exited with status 1
+2018-05-17T12:16:46.070751+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=leave-mng.herokuapp.com request_id=702311fb-5038-48d3-97fa-4c6f74b33a3a fwd="101.183.99.100" dyno= connect= service= status=503 bytes= protocol=https
+2018-05-17T12:16:46.424459+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=leave-mng.herokuapp.com request_id=a573768e-c756-4ba2-a443-c17a78340019 fwd="101.183.99.100" dyno= connect= service= status=503 bytes= protocol=https
