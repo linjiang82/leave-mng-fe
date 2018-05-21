@@ -2,6 +2,10 @@
   "name": "leave-mng",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.0.1",
+    "node": "8.1.2"
+  },
   "dependencies": {
     "autoprefixer": "7.1.2",
     "axios": "^0.17.1",
