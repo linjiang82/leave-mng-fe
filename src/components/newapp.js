@@ -24,7 +24,7 @@ class NewApp extends React.Component {
             console.log(this.props);
             return ( <form onSubmit = { e => {
                         e.preventDefault();
-                        axios.post('http://localhost:3001', {
+                        axios.post('https://leave-manage.herokuapp.com', {
                                 user: this.props.login.user,
                                 leaveType: this.props.leaveType.leaveType,
                                 leaveDays: this.refs.leaveDays.value,
