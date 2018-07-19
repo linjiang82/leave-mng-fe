@@ -109,10 +109,10 @@ export default (state=init,action) => {
             return state; 
             break;
         }
-        case "toggleCalendar":{
+        case "clearAppStatus":{
             state={
                 ...state,
-                toggleCalendar:!state.toggleCalendar,
+                appStatus:[],
             }
         return state; 
         break;

@@ -12,9 +12,8 @@ const socket=io('https://leave-manage.herokuapp.com')
 class HrEntry extends React.Component{
   constructor(props){
     super(props);
+    this.props.dispatch({type:'clearAppStatus'});
     this.saveItem = this.saveItem.bind(this);
-  }
-  componentWillMount(){
     this.props.dispatch({type:'readAll',payload:axios.get('/getApp')})
   }
   saveItem(e){

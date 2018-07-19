@@ -7,6 +7,7 @@ const socket=io('https://leave-manage.herokuapp.com')
 class QueryApp extends React.Component {
     constructor(props){
         super(props);
+        this.props.dispatch({type:'clearAppStatus'});
         this.props.dispatch({type:'readStatus',payload:axios.get('/getApp')});
     }
     render(){
