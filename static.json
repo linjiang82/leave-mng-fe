@@ -1,5 +1,8 @@
 {
 "root":"build/",
+"routes":{
+    "/**":"index.html"
+},
 "headers":{
     "/**":{
     "Acess-Control-Allow-Origin":"*"
