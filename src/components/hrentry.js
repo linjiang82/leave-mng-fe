@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import Loadable from 'react-loading-overlay';
 import io from 'socket.io-client';
 import styles from './hrentry.css';
 import Calendar from './calendar';
 import {copySelectedDates, toggleCalendar} from '../actions/action';
+import {apiBaseURL} from '../utils/Constants';
+
 const socket=io('https://leave-manage.herokuapp.com')
 
 class HrEntry extends React.Component{
@@ -14,7 +17,11 @@ class HrEntry extends React.Component{
     super(props);
     this.props.dispatch({type:'clearAppStatus'});
     this.saveItem = this.saveItem.bind(this);
-    this.props.dispatch({type:'readAll',payload:axios.get('/getApp')})
+    this.props.dispatch({type:'readAll',payload:axios.get(`${apiBaseURL}/getApp`)});
+    this.state = {
+        year:null,
+        month:null
+    }
   }
   saveItem(e){
     let result='';
@@ -22,7 +29,7 @@ class HrEntry extends React.Component{
       result='Declined';
       else if(e.target.parentNode.parentNode.childNodes[0].checked)
           result='Approved';
-    axios.post('/saveItem',{
+    axios.post(`${apiBaseURL}/saveItem`,{
       appId:e.target.parentNode.parentNode.parentNode.firstChild.textContent,
       status:result,
     }).then(response=>console.log(response))
@@ -30,7 +37,7 @@ class HrEntry extends React.Component{
   }
   render(){
     let TRS=[];
-        if(this.props.login.appStatus[0]){
+        if(!this.props.login.isFetching){
             for(let i=0;i<this.props.login.appStatus.length;i++){
                 let TDS=[];
                 TDS.push(<td>{this.props.login.appStatus[i].appId}</td>);
@@ -39,8 +46,12 @@ class HrEntry extends React.Component{
                 TDS.push(<td onClick={
                     (e)=>{
                         this.props.dispatch(copySelectedDates(i));
+                        //set the year and month and pass to Calendar to render the first
+                        //date of the application.
+                        let re=/(\d{4})-(\d)-/g;
+                        let result = re.exec((this.props.login.appStatus[i].selectedDates)[0]);
+                        this.setState({year:parseInt(result[1]),month:parseInt(result[2])-1})
                         let x=e.target.parentNode.parentNode.querySelectorAll('tr')
-                        console.log(x);
                         for(let i=0;i<x.length;i++){
                             x[i].style.backgroundColor='grey';
                         }
@@ -76,11 +87,16 @@ class HrEntry extends React.Component{
                     <tbody>
                     {TRS}
                     </tbody>
-                    <Calendar />
+                    <Calendar year={this.state.year} month={this.state.month}/>
                 </table>
             )
         }
-        else return <div>You have no application submitted yet</div>
+        else return <Loadable
+        active={this.props.login.isFetching}
+        spinner
+        text='Loading...'
+        >
+      </Loadable> 
         
     }
   }

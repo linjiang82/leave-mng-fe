@@ -1,4 +1,5 @@
 const init={
+    isFetching:true,
     isLogin:null,
     annualLeaveLeft:null,
     sickLeaveLeft:null,
@@ -47,12 +48,20 @@ export default (state=init,action) => {
             }
             break;
         }
+        case "readStatus_PENDING":{
+           return state = {
+               ...state,
+               isFetching:true,
+        }
+        break;
+    }
         case "readStatus_FULFILLED":{
             state.appStatus=[];
             for(let i=0;i<action.payload.data.length;i++){
                 if(action.payload.data[i].user===state.user){
                     state={
                         ...state,
+                        isFetching:false,
                         appStatus:[...state.appStatus,{
                             appId:action.payload.data[i]._id,
                             user:action.payload.data[i].user,
@@ -66,11 +75,19 @@ export default (state=init,action) => {
            return state; 
            break;
         }
+        case "readAll_PENDING":{
+            return state={
+                ...state,
+                isFetching:true,
+            }
+            break;
+        }
         case "readAll_FULFILLED":{
             state.appStatus=[];
             for(let i=0;i<action.payload.data.length;i++){
                     state={
                         ...state,
+                        isFetching:false,
                         appStatus:[...state.appStatus,{
                             appId:action.payload.data[i]._id,
                             user:action.payload.data[i].user,

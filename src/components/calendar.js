@@ -16,8 +16,8 @@ class Calendar extends Component{
 			else return 0;
 		}
 		let opts=[];
-		let year = this.props.calendar.year; 
-		let month =  this.props.calendar.month;
+		let year = this.props.year || this.props.calendar.year; 
+		let month =  this.props.month || this.props.calendar.month;
 		let firstDay = new Date(year,month,1);
 		let dayOne = firstDay.getDay();
 		let daysInMonth = [31,28+leap(year),31,30,31,30,31,31,30,31,30,31];
