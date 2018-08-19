@@ -71,7 +71,6 @@ class App extends React.Component{
 
 
 let PrivateRoute = ({component:Component,...rest}) => {
-  console.log(rest);
   const isLogin=rest.loginStatus;
   return (
     isLogin?(<Route { ...rest } component={Component}/>):(<Redirect to='/'/>) 

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import styles from './newapp.css';
 import Calendar from './calendar';
+import { apiBaseURL } from '../utils/Constants';
 
 class NewApp extends React.Component {
         constructor(props) {
@@ -21,10 +22,9 @@ class NewApp extends React.Component {
                         this.props.dispatch(deleteSelectedDates(dateClicked));
                 }
         }
-            console.log(this.props);
             return ( <form onSubmit = { e => {
                         e.preventDefault();
-                        axios.post('https://leave-manage.herokuapp.com', {
+                        axios.post(apiBaseURL, {
                                 user: this.props.login.user,
                                 leaveType: this.props.leaveType.leaveType,
                                 leaveDays: this.refs.leaveDays.value,

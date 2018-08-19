@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
-import Loadable from 'react-loading-overlay';
+import LoadingOverlay from 'react-loading-overlay';
 import io from 'socket.io-client';
 import styles from './hrentry.css';
 import Calendar from './calendar';
@@ -91,12 +91,12 @@ class HrEntry extends React.Component{
                 </table>
             )
         }
-        else return <Loadable
+        else return <LoadingOverlay
         active={this.props.login.isFetching}
         spinner
         text='Loading...'
         >
-      </Loadable> 
+      </LoadingOverlay> 
         
     }
   }
