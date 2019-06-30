@@ -10,7 +10,10 @@ class NewApp extends React.Component {
         constructor(props) {
             super(props);
         }
-       
+        //clear the month and year in state when switch from hrentry page to newapp
+        componentDidMount(){
+            this.props.dispatch({type:'reset'})
+        } 
         render() {
             let setDateArr = (e,year,month) => {
                 //save as ISO8601 dateString format, easier to check existance and convert back to date using Date();

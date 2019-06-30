@@ -7,6 +7,18 @@ let init = {
 }
 export default (state=init,action) => {
   switch(action.type){
+    case 'reset':
+      return state = {
+        ...state,
+        month:init.month,
+        year:init.year
+      }
+    case 'gotoDate':
+      return state = {
+        ...state,
+        month:action.month,
+        year:action.year
+      }
     case 'previous':
     if(state.month===0)
     return state={

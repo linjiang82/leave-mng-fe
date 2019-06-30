@@ -18,10 +18,13 @@ class HrEntry extends React.Component{
     this.props.dispatch({type:'clearAppStatus'});
     this.saveItem = this.saveItem.bind(this);
     this.props.dispatch({type:'readAll',payload:axios.get(`${apiBaseURL}/getApp`)});
-    this.state = {
-        year:null,
-        month:null
-    }
+    // this.state = {
+    //     year:null,
+    //     month:null
+    // }
+  }
+  componentDidMount(){
+    this.props.dispatch({type:'reset'})
   }
   saveItem(e){
     let result='';
@@ -50,7 +53,11 @@ class HrEntry extends React.Component{
                         //date of the application.
                         let re=/(\d{4})-(\d)-/g;
                         let result = re.exec((this.props.login.appStatus[i].selectedDates)[0]);
-                        this.setState({year:parseInt(result[1]),month:parseInt(result[2])-1})
+                        this.props.dispatch(
+                          {type:'gotoDate',
+                        year:parseInt(result[1]),
+                        month:parseInt(result[2])-1}
+                        )
                         let x=e.target.parentNode.parentNode.querySelectorAll('tr')
                         for(let i=0;i<x.length;i++){
                             x[i].style.backgroundColor='grey';
@@ -87,7 +94,8 @@ class HrEntry extends React.Component{
                     <tbody>
                     {TRS}
                     </tbody>
-                    <Calendar year={this.state.year} month={this.state.month}/>
+                    {/*<Calendar year={this.state.year} month={this.state.month}/>*/}
+                    <Calendar />
                 </table>
             )
         }
@@ -103,7 +111,8 @@ class HrEntry extends React.Component{
 
 const mapStateToProps = (state) => {
   return {
-    login: state.login
+    login: state.login,
+    calendar:state.calendar
   }
 }
 
