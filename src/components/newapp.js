@@ -12,6 +12,7 @@ class NewApp extends React.Component {
         }
         //clear the month and year in state when switch from hrentry page to newapp
         componentDidMount(){
+            this.props.dispatch({type:'clearAppStatus'})
             this.props.dispatch({type:'reset'})
         } 
         render() {

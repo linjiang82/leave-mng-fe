@@ -127,12 +127,16 @@ export default (state=init,action) => {
             break;
         }
         case "clearAppStatus":{
-            state={
+            return state={
                 ...state,
                 appStatus:[],
             }
-        return state; 
-        break;
+        }
+        case "reset":{
+             return state = {
+                ...state,
+                selectedDates:[]
+            }
         }
         default:
         return state;
